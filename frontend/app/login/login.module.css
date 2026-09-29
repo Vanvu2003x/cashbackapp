@@ -1,0 +1,350 @@
+.screen {
+  min-height: 100dvh;
+  padding: 24px 18px 34px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fff 0%, #fbfcff 42%, #f4f7fb 100%);
+  color: #101d38;
+  font-family: "Be Vietnam Pro", "Inter", sans-serif;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 54px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #101d38;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.wordmark {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 2px;
+  line-height: 1;
+}
+
+.wordmark strong {
+  color: #101d38;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.wordmark b {
+  color: #ee2168;
+  font-size: 31px;
+  font-style: italic;
+  line-height: .85;
+}
+
+.wordmark small {
+  grid-column: 1 / -1;
+  margin-top: 5px;
+  color: #7a879a;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.backButton {
+  min-width: 82px;
+  height: 38px;
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #ffe0eb;
+  border-radius: 999px;
+  color: #ee2168;
+  background: #fff0f6;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.hero {
+  margin-top: 42px;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 30px;
+  padding: 0 11px;
+  border-radius: 999px;
+  color: #ee2168;
+  background: #fff0f6;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  margin: 14px 0 8px;
+  color: #101d38;
+  font-size: 38px;
+  line-height: 1.06;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.hero h1 span {
+  color: #ee2168;
+}
+
+.hero p {
+  max-width: 310px;
+  margin: 0;
+  color: #627188;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.card {
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px solid #edf0f5;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(16, 29, 56, .08);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field > span {
+  color: #101d38;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.input {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 7px 5px 14px;
+  border: 1px solid #e5e9f1;
+  border-radius: 16px;
+  background: #f8faff;
+  color: #738096;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.input:focus-within {
+  border-color: #f04481;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(240, 68, 129, .12);
+}
+
+.input input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #101d38;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.input input::placeholder {
+  color: #9aa6b6;
+  font-weight: 500;
+}
+
+.input button {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 13px;
+  color: #738096;
+  background: transparent;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 1px;
+}
+
+.check {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #627188;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.check input {
+  width: 18px;
+  height: 18px;
+  accent-color: #ee2168;
+}
+
+.row a {
+  color: #ee2168;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.primary,
+.google {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.primary {
+  margin-top: 4px;
+  border: 0;
+  color: #fff;
+  background: linear-gradient(100deg, #f51f70, #ff8a3e);
+  box-shadow: 0 10px 18px rgba(239, 43, 105, .2);
+}
+
+.primary:disabled {
+  opacity: .64;
+}
+
+.divider {
+  position: relative;
+  margin: 21px 0 15px;
+  display: flex;
+  justify-content: center;
+  color: #8a96a7;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #edf0f5;
+}
+
+.divider span {
+  position: relative;
+  z-index: 1;
+  padding: 0 12px;
+  background: #fff;
+}
+
+.google {
+  border: 1px solid #e6eaf1;
+  color: #101d38;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(16, 29, 56, .045);
+}
+
+.google svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.switch {
+  margin: 18px 0 0;
+  color: #65748a;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.switch a {
+  color: #ee2168;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 390px) {
+  .screen {
+    padding: 22px 14px 30px;
+  }
+
+  .wordmark strong {
+    font-size: 22px;
+  }
+
+  .wordmark b {
+    font-size: 29px;
+  }
+
+  .wordmark small {
+    font-size: 9px;
+  }
+
+  .backButton {
+    min-width: 40px;
+    width: 40px;
+    padding: 0;
+  }
+
+  .backButton svg {
+    margin: 0;
+  }
+
+  .backButton {
+    font-size: 0;
+  }
+
+  .hero {
+    margin-top: 36px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+}

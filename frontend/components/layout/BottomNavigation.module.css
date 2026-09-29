@@ -1,0 +1,61 @@
+.bar {
+  position: fixed;
+  z-index: 40;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(390px, 100%);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  height: calc(72px + env(safe-area-inset-bottom, 0px));
+  padding: 0 6px env(safe-area-inset-bottom, 0px);
+  border-top: 1px solid #f0edf1;
+  background: #fff;
+  box-shadow: 0 -4px 20px #25203b08;
+}
+.item {
+  position: relative;
+  min-width: 0;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 0 0 11px;
+  box-sizing: border-box;
+  color: #727a90;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.icon {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  transition: background 160ms ease, color 160ms ease;
+}
+.badge { position: absolute; top: -4px; right: -5px; min-width: 16px; height: 16px; padding: 0 3px; display: grid; place-items: center; box-sizing: border-box; border: 2px solid #fff; border-radius: 999px; color: #fff; background: #ed155d; font-size: 9px; font-style: normal; font-weight: 800; line-height: 1; }
+.label { font-size: 10px; font-weight: 600; line-height: 14px; letter-spacing: 0; white-space: nowrap; }
+.active { color: #e91560; }
+.active:not(.primary) .icon { background: #fff0f5; }
+.primary .icon {
+  position: absolute;
+  top: -21px;
+  width: 58px;
+  height: 58px;
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #ff126b 12%, #ff7638 92%);
+  box-shadow: 0 5px 12px #ef326528;
+}
+.primary .icon svg { transform: rotate(-35deg); }
+.primary .label { color: #e91560; }
+.item:focus-visible { outline: 2px solid #e91560; outline-offset: -3px; border-radius: 8px; }
+@media (hover: hover) { .item:hover .icon { background-color: #fff0f5; color: #e91560; } .primary:hover .icon { color: #fff; filter: brightness(1.06); } }
+@media (prefers-reduced-motion: reduce) { .icon { transition: none; } }
